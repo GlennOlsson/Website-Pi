@@ -8,19 +8,25 @@
 <button type="button" onclick="loadDoc()">Change Content</button>
 </div>
 
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script>
-function loadDoc() {
-  console.log("Heyya!!")
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("demo").innerHTML =
-      this.responseText;
-    }
-  };
-  xhttp.open("GET", "ajax_info.txt", true);
-  xhttp.send();
-}
+$.get("test.jsp", function (response) {
+    //do operation using the response
+    console.log(response);
+}, "json");
+
+// function loadDoc() {
+//   console.log("Heyya!!")
+//   var xhttp = new XMLHttpRequest();
+//   xhttp.onreadystatechange = function() {
+//     if (this.readyState == 4 && this.status == 200) {
+//       document.getElementById("demo").innerHTML =
+//       this.responseText;
+//     }
+//   };
+//   xhttp.open("GET", "ajax_info.txt", true);
+//   xhttp.send();
+// }
 </script>
 
 </body>
