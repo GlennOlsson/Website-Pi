@@ -10,10 +10,12 @@
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script>
+function loadDoc() {
 $.get("test.jsp", function (response) {
     //do operation using the response
     console.log(response);
 }, "json");
+}
 
 // function loadDoc() {
 //   console.log("Heyya!!")
