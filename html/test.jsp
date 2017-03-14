@@ -1,7 +1,7 @@
 <%
 
 String temp1;
-test obj = new test();
+Test obj = new Test();
 temp1 = obj.getString();
 %>
 
