@@ -13,10 +13,31 @@
 <script>
 function loadDoc() {
   console.log("loadDoc is running");
+  var xmlhttp;
+      if (window.XMLHttpRequest){
+          xmlhttp = new XMLHttpRequest(); //for IE7+, Firefox, Chrome, Opera, Safari
+      } else {
+        console.log("ERROR, IE < 7");
+      }
 
-                  $.get('Test', "EYY", function(responseText) {
-                          $('#demo').text(responseText);
-                  });
+      xmlhttp.open("GET", reqURL, true);
+
+         //When readyState is 4 then get the server output
+         xmlhttp.onreadystatechange = function() {
+             if (xmlhttp.readyState == 4) {
+                 if (xmlhttp.status == 200)
+                 {
+                     document.getElementById("message").innerHTML = xmlhttp.responseText;
+                     //alert(xmlhttp.responseText);
+                 }
+                 else
+                 {
+                     alert('Something is wrong !!');
+                 }
+             }
+         };
+
+         xmlhttp.send(null);
 
 }
 </script>
