@@ -15,7 +15,7 @@ function loadDoc() {
   console.log("loadDoc is running");
   $.get("http://192.168.1.150:80/test.jsp", function(result) {
 
-        console.log(result + " = result");
+      $("body").text(result);
     });
 }
 
