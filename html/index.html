@@ -13,10 +13,17 @@
 <script>
 function loadDoc() {
   console.log("loadDoc is running");
-$.get("test.jsp", function (response) {
-    //do operation using the response
-    console.log(response);
-}, "json");
+  $.ajax({
+                  url : 'test.jsp', // Your Servlet mapping or JSP(not suggested)
+                  type : 'POST',
+                  dataType : 'html', // Returns HTML as plain text; included script tags are evaluated when inserted in the DOM.
+                  success : function(response) {
+                      $('#outputDiv').html(response); // create an empty div in your page with some id
+                  },
+                  error : function(request, textStatus, errorThrown) {
+                      alert(errorThrown);
+                  }
+              });
 }
 
 // function loadDoc() {
