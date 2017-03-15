@@ -1,8 +1,7 @@
+<body>
 <%
+  Test tc = new Test();
 
-String temp1;
-Test obj = new Test();
-temp1 = obj.getString();
+  out.print(tc.getString());
 %>
-
-<%=temp1 %>
+</body>
