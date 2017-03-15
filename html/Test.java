@@ -6,8 +6,8 @@ public class Test {
 
 
      }
-  public String getString(){
-    return "Heyya, bitch";
+  public String getString(String hey, String yo){
+    return "Heyya, bitch " + yo + "  --  " +hey;
   }
 
 }
