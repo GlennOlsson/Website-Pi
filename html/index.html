@@ -13,18 +13,10 @@
 <script>
 function loadDoc() {
   console.log("loadDoc is running");
-  $.ajax({
-                  url : 'http://192.168.1.150:80/test.jsp', // Your Servlet mapping or JSP(not suggested)
-                  type : 'POST',
-                  dataType : 'html', // Returns HTML as plain text; included script tags are evaluated when inserted in the DOM.
-                  success : function(response) {
-                    console.log(response+" = response");
-                      $('#outputDiv').html(response); // create an empty div in your page with some id
-                  },
-                  error : function(request, textStatus, errorThrown) {
-                      alert(errorThrown);
-                  }
-              });
+  $.get("http://192.168.1.150:80/test.jsp", function(result) {
+
+        console.log(result + " = result");
+    });
 }
 
 // function loadDoc() {
