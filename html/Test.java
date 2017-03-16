@@ -1,4 +1,8 @@
-public class Test {
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+public class Test extends HttpServlet{
   public static void main(String args[])
      {
         Test obj = new Test();
