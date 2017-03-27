@@ -14,8 +14,7 @@ public static void main(String args[]){
 			String doc=document.toString().replace("reddit: the front page of the internet", "glenndit: because fuck jensens blacklist");
 
 			doc=doc.split("<body class=\"listing-page hot-page front-page\">")[0]+
-					"<body class=\"listing-page hot-page front-page\"><button onclick=\"window.open('http://84.55.99.94:8080/index2.html')\">To index2.html</button>"
-					+"<button \"onclick=prompt('Enter')\">Prompts</button>"+doc.split("<body class=\"listing-page hot-page front-page\">")[1];
+					"<body class=\"listing-page hot-page front-page\"><button onclick=\"window.open('/index2.html')\">To index2.html</button>"+doc.split("<body class=\"listing-page hot-page front-page\">")[1];
 
 			//Write the html
 			String path=null;
