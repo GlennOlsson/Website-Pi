@@ -15,7 +15,7 @@ String url = "https://www.reddit.com/";
 
 			document = Jsoup.connect(url).userAgent("Chrome").get();
 
-      FileReader reader = new FileReader("META-INF/Test.txt");
+      FileReader reader = new FileReader("/var/lib/tomcat7/webapps/ROOT/index.html");
 						BufferedReader br = new BufferedReader(reader);
 				Iterator<String> iterator= br.lines().iterator();
 				//Writes old + new content
