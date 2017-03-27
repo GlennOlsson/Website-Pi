@@ -28,6 +28,5 @@ String url = "https://www.reddit.com/";
     System.out.println("ERROR CAUGHT");
     }
 
-
 }
 }
