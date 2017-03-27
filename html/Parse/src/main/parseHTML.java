@@ -26,6 +26,7 @@ String url = "https://www.reddit.com/";
 			} catch (Exception e) {
 				// FIXME: handle exception
 				System.err.println("ERROR");
+        e.printStackTrace();
 			}
 }
 }
