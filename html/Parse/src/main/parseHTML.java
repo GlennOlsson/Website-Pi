@@ -19,11 +19,15 @@ public static void main(String args[]){
 
 			//Write the html
 			String path=null;
+
+			System.out.println(System.getProperty("os.name").toLowerCase());
+
 			if(System.getProperty("os.name").toLowerCase().contains("windows")){
 				path="C:\\Users\\Glenn\\Desktop\\New.html";
 			}
 			else if (System.getProperty("os.name").toLowerCase().contains("linux")) {
 				path="/var/lib/tomcat7/webapps/ROOT/index.html";
+				System.out.println("LINUX");
 			}
 				try(FileWriter file = new FileWriter(path)){
 					file.write(doc.toString());
