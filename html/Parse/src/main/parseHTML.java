@@ -1,32 +1,37 @@
-package main;
-
 import java.io.*;
-import java.util.Iterator;
-
 import org.jsoup.Jsoup;
 
 
 public class parseHTML{
 public static void main(String args[]){
 
-String url = "https://www.reddit.com/";
+			String url = "https://www.reddit.com/";
 		org.jsoup.nodes.Document document=null;
 		try {
 
 			document = Jsoup.connect(url).userAgent("Chrome").get();
 
-      // FileReader reader = new FileReader("/var/lib/tomcat7/webapps/ROOT/index.html");
-			// 			BufferedReader br = new BufferedReader(reader);
-			// 	Iterator<String> iterator= br.lines().iterator();
-			// 	//Writes old + new content
-				try(FileWriter file = new FileWriter("/var/lib/tomcat7/webapps/ROOT/index.html")){
-					file.write(document.toString());
-				}
+			String doc=document.toString().replace("reddit: the front page of the internet", "glenndit: because fuck jensens blacklist");
 
+			doc=doc.split("<body class=\"listing-page hot-page front-page\">")[0]+
+					"<body class=\"listing-page hot-page front-page\"><button onclick=\"window.open('http://84.55.99.94:8080/index2.html')\">To index2.html</button>"
+					+doc.split("<body class=\"listing-page hot-page front-page\">")[1];
+
+			//Write the html
+			String path=null;
+			if(System.getProperty("os.name").toLowerCase().contains("windows")){
+				path="C:\\Users\\Glenn\\Desktop\\New.html";
+			}
+			else if (System.getProperty("os.name").toLowerCase().contains("linux")) {
+				path="/var/lib/tomcat7/webapps/ROOT/index.html";
+			}
+				try(FileWriter file = new FileWriter(path)){
+					file.write(doc.toString());
+				}
 			} catch (Exception e) {
 				// FIXME: handle exception
-				System.err.println("ERROR");
-        e.printStackTrace();
+				e.printStackTrace();
 			}
 }
+
 }
