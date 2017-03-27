@@ -23,10 +23,8 @@ String url = "https://www.reddit.com/";
 				// FIXME: handle exception
 				System.err.println("ERROR");
 			}
-
-    } catch (Exception e) {
+      catch (Exception e) {
     System.out.println("ERROR CAUGHT");
     }
-
 }
 }
