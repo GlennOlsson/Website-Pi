@@ -1,6 +1,8 @@
 import java.io.*;
 import java.util.Iterator;
 
+import org.jsoup.Jsoup;
+
 
 public class parseHTML{
 public static void main(String args[]){
@@ -23,8 +25,5 @@ String url = "https://www.reddit.com/";
 				// FIXME: handle exception
 				System.err.println("ERROR");
 			}
-      catch (Exception e) {
-    System.out.println("ERROR CAUGHT");
-    }
 }
 }
