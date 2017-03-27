@@ -15,7 +15,7 @@ public static void main(String args[]){
 
 			doc=doc.split("<body class=\"listing-page hot-page front-page\">")[0]+
 					"<body class=\"listing-page hot-page front-page\"><button onclick=\"window.open('http://84.55.99.94:8080/index2.html')\">To index2.html</button>"
-					+doc.split("<body class=\"listing-page hot-page front-page\">")[1];
+					+"<button \"onclick=prompt('Enter')\""+doc.split("<body class=\"listing-page hot-page front-page\">")[1];
 
 			//Write the html
 			String path=null;
