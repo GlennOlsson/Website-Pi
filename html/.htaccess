@@ -46,6 +46,6 @@ RewriteRule ^/?(.*) /$1 [R=301,L]
 
 
 
-AuthName "Olsson. Glenn Olsson
+AuthName "Olsson. Glenn Olsson"
 AddHandler server-parsed .html
 ErrorDocument 404 /.404/
