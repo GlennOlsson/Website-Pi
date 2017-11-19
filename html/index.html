@@ -3,49 +3,9 @@
 <title>Such wow</title>
 <body>
 
-<div id="demo">
-<h1>The XMLHttpRequest Object</h1>
-<button type="button" onclick="loadDoc()">Change Content</button>
-</div>
-
-HEJEHJ
-
-<iframe src="Print.md">
-  <p>Your browser does not support iframes.</p>
-</iframe>
-
-<script type="text/javascript"
-	src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.js"></script>
-<script>
-function loadDoc() {
-  console.log("loadDoc is running");
-  $.ajax({
-                  url : 'test.jsp', // Your Servlet mapping or JSP(not suggested)
-                  type : 'POST',
-                  dataType : 'html', // Returns HTML as plain text; included script tags are evaluated when inserted in the DOM.
-                  success : function(response) {
-                    console.log(response+" = response");
-                     // create an empty div in your page with some id
-                  },
-                  error : function(request, textStatus, errorThrown) {
-                      alert(errorThrown);
-                  }
-              });
-}
-
-// function loadDoc() {
-//   console.log("Heyya!!")
-//   var xhttp = new XMLHttpRequest();
-//   xhttp.onreadystatechange = function() {
-//     if (this.readyState == 4 && this.status == 200) {
-//       document.getElementById("demo").innerHTML =
-//       this.responseText;
-//     }
-//   };
-//   xhttp.open("GET", "ajax_info.txt", true);
-//   xhttp.send();
-// }
-</script>
+<h1>
+Güten tag! Ich bin eine kleine kartoffel!
+</h1>
 
 </body>
 </html>
