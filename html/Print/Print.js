@@ -17,7 +17,9 @@ $(document).ready(function(){
     var millisecondsToWait = 1500;
     setTimeout(function() {
     // Whatever you want to do after the wait
+    while(true){}
         updateFromFile()
+    }
     }, millisecondsToWait);
 
 
