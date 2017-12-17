@@ -14,9 +14,9 @@ $(document).ready(function(){
     updateFromFile()
 
     $(".updateButton").click(function(){
-        $(this).disable(true)
+        $(this).prop('disabled', true);
         updateFromFile()
-        $(this).disable(false)
+        $(this).prop('disabled', false);
     })
 
 });
