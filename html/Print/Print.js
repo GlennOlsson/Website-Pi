@@ -7,4 +7,7 @@ client.onreadystatechange = function() {
 }
 client.send();
 
+
+window.scrollTo(0, 10000);
+
 });
