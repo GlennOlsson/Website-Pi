@@ -1,18 +1,20 @@
 $(document).ready(function(){
 
-    $.get('../Print.md', function(data) {
-        $("p").text(data)
-        $("html, body").animate({
-             scrollTop: $(document).height()
-         }, 1);
+    function updateFromFile(){
+        $.get('../Print.md', function(data) {
+            $("p").text(data)
+        }, "text");
+    })
 
-         while(true){
-             $.get('../Print.md', function(data) {
-                 $("p").text(data)
-             }, "text");
-         }
+    updateFromFile()
+    $("html, body").animate({
+         scrollTop: $(document).height()
+    }, 1);
 
-    }, 'text');
-
+    var millisecondsToWait = 500;
+    setTimeout(function() {
+    // Whatever you want to do after the wait
+        updateFromFile()
+    }, millisecondsToWait);
 
 });
