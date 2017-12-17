@@ -5,6 +5,13 @@ $(document).ready(function(){
         $("html, body").animate({
              scrollTop: $(document).height()
          }, 1);
+
+         while(true){
+             $.get('../Print.md', function(data) {
+                 $("p").text(data)
+             }, "text");
+         }
+
     }, 'text');
 
 
