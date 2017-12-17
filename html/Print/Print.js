@@ -7,13 +7,16 @@ $(document).ready(function(){
             $("html, body").animate({
                 scrollTop: $(document).height()
             }, 1);
+
         }, "text");
     }
 
     updateFromFile()
 
     $(".updateButton").click(function(){
+        $(this).disable(true)
         updateFromFile()
+        $(this).disable(false)
     })
 
 });
