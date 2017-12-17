@@ -12,15 +12,4 @@ $(document).ready(function(){
 
     updateFromFile()
 
-
-
-    var millisecondsToWait = 5000;
-    setTimeout(function() {
-    // Whatever you want to do after the wait
-    while(true){
-        updateFromFile()
-    }
-    }, millisecondsToWait);
-
-
 });
