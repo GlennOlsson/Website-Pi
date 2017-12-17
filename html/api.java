@@ -15,6 +15,5 @@ public class api{
             BufferedReader in = new BufferedReader(
         new InputStreamReader(clientSocket.getInputStream()));
     ) {
-    }
-    }
+    }    }
 }
