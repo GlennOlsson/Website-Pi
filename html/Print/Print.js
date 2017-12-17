@@ -8,6 +8,6 @@ client.onreadystatechange = function() {
 client.send();
 
 
-$("0").scrollTop( 300 );
+$("scrollingDiv").scrollTop( 300 );
 
 });
