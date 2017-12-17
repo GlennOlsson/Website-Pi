@@ -12,4 +12,8 @@ $(document).ready(function(){
 
     updateFromFile()
 
+    $(".updateButton").click(function(){
+        updateFromFile()
+    })
+
 });
