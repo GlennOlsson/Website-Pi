@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
     function updateFromFile(){
-        $.get('../Errorlog.md', function(data) {
+        $.get('../../Print.md', function(data) {
             $("p").text(data)
 
             $("html, body").animate({
