@@ -6,3 +6,48 @@
     padding: 10px;
     text-align: center;
 }
+
+.background{
+    width: 200px;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+}
+
+h1{
+    position: absolute;
+
+    font-size: 75px;
+    font-family: Baloo Paaji;
+
+    margin-top: -65%;
+    margin-left: 32%;
+}
+
+.logos{
+   position: absolute;
+
+   margin-top: -50%;
+   margin-left: 35%;
+
+   padding: 5px;
+}
+
+.logos > a > img{
+    padding: 30px;
+}
+
+a:link {
+    color: transparent;
+}
+
+a:visited {
+    color: transparent;
+}
+
+
+html, body {
+    margin: 0px;
+    width: 100%;
+    overflow: hidden
+}
