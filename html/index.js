@@ -17,5 +17,8 @@ $(document).ready(function(){
 
         $(".logos").css("margin-top", "50%")
         $(".logos").css("margin-left", "29%")
+
+        $(".GlennText").css("margin-top", "20%")
+        $(".GlennText").css("margin-left", "24%")
 }
 });
