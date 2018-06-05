@@ -1,46 +1,30 @@
-.center {
-    margin: auto;
-    margin-top: 7%;
-    width: 50%;
-    border: 3px solid #E2007F;
-    padding: 10px;
-    text-align: center;
-}
-
-#vertical{
-    /* Full height */
-    height: 1900px;
-
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.background{
-    width: 200px;
-    height: 150px;
-    overflow: hidden;
-    position: relative;
-}
-
-h1{
+.blur-div{
+    height: 100%;
+    width: 100%;
+    background-color: #0000005c;
     position: absolute;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.GlennText{
     font-size: 75px;
     font-family: Baloo Paaji;
+    text-align: center;
+    margin: 0px;
+}
 
-    margin-top: -65%;
-    margin-left: 32%;
+.center{
+    display: block;
+    justify-content: center;
+    align-items: center;
 }
 
 .logos{
-   position: absolute;
-
-   margin-top: -50%;
-   margin-left: 35%;
-
-   padding: 5px;
+    padding: 5px;
+    text-align: center;
 }
 
 .logos > a > img{
@@ -65,8 +49,8 @@ h1, a, body, html, div {
                                   supported by Chrome and Opera */
 }
 
-html, body {
+body{
+    background-image: url("Resources/STHLMHorizontal-1920x1440.jpg");
+    background-size: 100%;
     margin: 0px;
-    width: 100%;
-    overflow: hidden
 }
