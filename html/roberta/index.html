@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html>
-<body>
+	<head>
+		
+	</head>
+<body onload="myFunction()">
 
-<audio controls>
+<audio id="audio" controls autoplay>
   <source src="Roberta.mp3" type="audio/mpeg">
 Your browser does not support the audio element.
 </audio>
+
+<p>hej hopp</p>
+
+<script>
+function myFunction(){
+// one context per document
+	var context = new (window.AudioContext || window.webkitAudioContext)();
+	var osc = context.createOscillator(); // instantiate an oscillator
+	osc.type = 'sine'; // this is the default - also square, sawtooth, triangle
+	osc.frequency.value = 440; // Hz
+	osc.connect(context.destination); // connect it to the destination
+	osc.start(); // start the oscillator
+	osc.stop(context.currentTime + 2); 
+}
+		</script>
 
 </body>
 </html>
