@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Baloo+Paaji" rel="stylesheet">
+	<style>
+		@font-face {
+			font-family: Berling;
+			src: url('../fonts/berlingskesans-lt-webfont.ttf');
+		}
+
+		@font-face {
+			font-family: Berling;
+			font-weight: bold;
+			src: url('../fonts/berlingskesans-bd-webfont.ttf');
+		}
+
+
+		.GlennTextBig {
+			font-size: 75px;
+			font-family: Berling;
+			font-weight: bold;
+			text-align: center;
+			margin: 0px;
+		}
+
+		#changeable {
+			min-height: 50vh;
+		}
+
+		p {
+			font-size: 15px;
+			font-family: Berling;
+		}
+
+		#container {
+			min-height: 100vh;
+		}
+
+		#input {
+			padding: 10px 40px 10px 10px;
+			border: 1px solid black;
+			margin: 20px 0px;
+			border-radius: 7px;
+			font-family: Berling;
+		}
+
+		#hidden-abosolute {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			background-color: transparent;
+			opacity: 1;
+		}
+	</style>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.x/dist/index.umd.js"></script>
+
+	<script>		
+		const startFirework = () => {
+			const container = document.querySelector('.firework')
+			const fireworks = new Fireworks.default(container)
+			fireworks.start()
+
+
+			console.log("firework started on ", container)
+		}
+
+		const toTitleCase = (s) => {
+			let r = s[0].toUpperCase()
+			return r + s.slice(1).toLowerCase()
+		}
+
+		const answers = [
+			"bruges",
+			"brugge",
+		]
+
+		const onUpdatedText = (event) => {
+			const inputElem = document.querySelector("#input")
+			const text = inputElem.value.toLowerCase()
+
+			const index = answers.indexOf(text)
+			if(answers.includes(text)) {
+				inputElem.disabled = true
+
+				const answer = toTitleCase(text)
+
+
+				startFirework()
+
+				const changeableElem = document.querySelector("#changeable")
+				changeableElem.innerHTML = `
+					<p>
+						You are correct. Your treasure is in ${answer}!
+
+						<br>
+						<br>
+						<br>
+
+						When the timing fits you most, bring your favorite host.
+
+						<br>
+						<br>
+
+						To the restaurant with a "tyre company star"
+						<br>
+						<br>
+						And be glad that you from dutchies, far, far are.
+					</p>
+				`
+			}
+		}
+	</script>
+</head>
+
+<meta charset="UTF-8">
+<title>Hi qtπ</title>
+
+<body>
+	<div id="container">
+		<p class="GlennTextBig">
+			Oh mighty clue finder
+		</p>
+		<div id="hidden-abosolute" class="firework"></div>
+
+		<div id="changeable">
+			<p>
+				You have found all the clues, but I have deceived you. The treasure is not here.
+				<br>
+				<br>
+				<br>
+
+				The treasure is in a fairytale fucking town.
+
+				<br>
+				<br>
+				<br>
+
+				For your final quest, tell me this town so picturesque.
+
+				<br>
+
+				<br>
+				<input id="input" placeholder="It's a fairytale fucking town" oninput="onUpdatedText()" />
+			</p>
+		</div>
+
+	</div>
+</body>
+
+</html>
